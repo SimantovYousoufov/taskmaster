@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/simantovyousoufov/taskmaster/data"
 	"github.com/spf13/cobra"
+	"os"
 	"strings"
 )
 
@@ -22,8 +23,10 @@ var mitCmd = &cobra.Command{
 		err = ts.AddTask(data.MITTask, newMit)
 
 		if err == data.ErrAtTaskLimit {
+			PrintError(err)
 			PrintTaskSet(ts)
-			Bail(err)
+
+			os.Exit(1)
 		}
 
 		must(err)

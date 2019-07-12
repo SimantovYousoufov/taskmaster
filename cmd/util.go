@@ -68,6 +68,10 @@ func PrintTaskList(tl data.TaskList, i *int) {
 	fmt.Printf("\n")
 }
 
+func PrintError(err error) {
+	color.Red(fmt.Sprintf("Error: %s\n\n", err))
+}
+
 func Bail(err error) {
 	fmt.Printf("Error: %s\n", err)
 	os.Exit(1)
