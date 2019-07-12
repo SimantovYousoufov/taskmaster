@@ -48,6 +48,18 @@ TODOs:
 4) Ticket FizzBuzz project tickets
 ```
 
+# Installation
+### Via Homebrew
+`$ brew install SimantovYousoufov/tap/taskmaster`
+
+### Via Releases
+1. Download the relevant [release](https://github.com/SimantovYousoufov/taskmaster/releases)
+1. Drop the binary in your $PATH
+
+### From source
+1. Clone the repository
+1. `$ go install .`
+
 # Usage
 ```
 $ tkm --help
