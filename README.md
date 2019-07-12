@@ -70,7 +70,6 @@ Usage:
   tkm [command]
 
 Available Commands:
-  daemon      Run the taskmaster daemon
   help        Help about any command
   mit         Add a task to the MIT list
   rm          Remove a task from the task list by index. Use `tkm stat` for indexes.
