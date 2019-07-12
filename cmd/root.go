@@ -16,7 +16,7 @@ var cfgFile string
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.taskmasker.json)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.taskmaster.json)")
 
 	viper.SetDefault(MITLimitKey, data.MITLimit)
 	viper.SetDefault(TodoLimitKey, data.TodoLimit)
