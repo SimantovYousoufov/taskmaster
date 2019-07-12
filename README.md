@@ -3,6 +3,8 @@ Taskmaster
 Taskmaster helps you focus on the important work at hand, so you can free up brain time for more important problems.
 
 # Why use the Most Important Tasks (MIT) system?
+[More Info](https://personalmba.com/most-important-tasks/)
+
 Modern work life is a daily struggle to keep up with a never ending list of TODOs. It requires us to organize and prioritize work on the fly. the MIT task list system is a way to organize these competing priorities and become realistic about which tasks you can reasonably accomplish.
 
 In the MIT list, your tasks are broken up into two types: Most Important Tasks (urgent, do or die) and TODOs (important, but not urgent). MITs are limited to a small number (3) to force you to prioritize whenever adding a new one. The TODOs list can grow larger, but must be groomed on a regular basis.
