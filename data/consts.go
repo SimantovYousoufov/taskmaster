@@ -1,6 +1,6 @@
 package data
 
-import "github.com/pkg/errors"
+import "errors"
 
 const (
 	MITLimit = 3

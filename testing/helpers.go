@@ -2,8 +2,8 @@ package testing
 
 import (
 	"reflect"
-	"testing"
 	"runtime"
+	"testing"
 )
 
 //
