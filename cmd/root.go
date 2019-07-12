@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/fsnotify/fsnotify"
+	"github.com/simantovyousoufov/taskmaster/data"
 	"os"
 	"path"
 
@@ -16,6 +17,9 @@ var cfgFile string
 func init() {
 	cobra.OnInitialize(initConfig)
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.taskmasker.json)")
+
+	viper.SetDefault(MITLimitKey, data.MITLimit)
+	viper.SetDefault(TodoLimitKey, data.TodoLimit)
 }
 
 func initConfig() {

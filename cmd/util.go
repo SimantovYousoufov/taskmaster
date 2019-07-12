@@ -24,6 +24,9 @@ func LoadTaskSet() (*data.TaskSet, error) {
 		return nil, errors.New("unable to read in task set")
 	}
 
+	ts.MITTasks.TaskLimit = viper.GetInt(MITLimitKey)
+	ts.TodoTasks.TaskLimit = viper.GetInt(TodoLimitKey)
+
 	return ts, err
 }
 
@@ -52,13 +55,7 @@ func PrintTaskSet(ts *data.TaskSet) {
 }
 
 func PrintTaskList(tl data.TaskList, i *int) {
-	c := color.New(color.FgRed)
-
 	for _, t := range tl.Tasks {
-		if t.IsOutstanding() {
-			c.Printf("*")
-		}
-
 		fmt.Printf("%d) %s", *i, t.Content)
 
 		fmt.Printf("\n")

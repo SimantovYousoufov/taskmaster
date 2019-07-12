@@ -139,5 +139,12 @@ TODOs:
 3) Schedule lunch with FizzBuzz CFO
 ```
 
+### Configuring Taskmaster
+```
+$ tkm config
+MIT Task Limit (number): 3
+✔ Todo Task Limit (number): 10
+```
+
 # Data Privacy
 Taskmaster keeps all its data local on your device (`$HOME/.taskmaster.json` by default). Your task list is stored plaintext in JSON.

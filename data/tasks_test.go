@@ -88,6 +88,19 @@ func TestTaskList_RemoveTask(t *testing.T) {
 	test.AssertNilError(t, l.RemoveTask(0))
 }
 
+func TestTaskList_Limit(t *testing.T) {
+	l := &TaskList{
+		TasksType: MITTask,
+		Tasks: make([]Task, 0),
+	}
+
+	test.AssertSame(t, 3, l.Limit())
+
+	l.TaskLimit = 10
+
+	test.AssertSame(t, 10, l.Limit())
+}
+
 func TestTaskSet_AddTask(t *testing.T) {
 	s := NewTaskSet()
 

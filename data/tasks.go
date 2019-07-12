@@ -67,6 +67,8 @@ func (ts *TaskSet) ToJSON() ([]byte, error) {
 type TaskList struct {
 	TasksType TaskType `json:"tasks_type"`
 	Tasks     []Task   `json:"tasks"`
+
+	TaskLimit int
 }
 
 func (tl *TaskList) IsEmpty() bool {
@@ -100,8 +102,11 @@ func (tl *TaskList) IsAtLimit() bool {
 	return len(tl.Tasks) >= tl.Limit()
 }
 
-// @todo config control of task limits
 func (tl *TaskList) Limit() int {
+	if tl.TaskLimit != 0 {
+		return tl.TaskLimit
+	}
+
 	if tl.TasksType == MITTask {
 		return MITLimit
 	}

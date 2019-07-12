@@ -17,6 +17,9 @@ const (
 		"tasks": []
 	}
 }`
+
+	MITLimitKey = "config.mit_limit"
+	TodoLimitKey = "config.todo_limit"
 )
 
 var (
