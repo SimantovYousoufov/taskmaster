@@ -43,6 +43,8 @@ func initConfig() {
 		must(err)
 
 		f.Close()
+
+		viper.WriteConfig()
 	}
 
 	if err := viper.ReadInConfig(); err != nil {
